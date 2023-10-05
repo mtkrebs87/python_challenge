@@ -2,34 +2,43 @@ import os
 import csv
 
 election_csv = os.path.join(r"C:\Users\Michael Krebs\Desktop\Data Analysis Course\Module 3 Challenge\python_challenge\PyPoll\Resources\election_data.csv")
-print(election_csv)
-
-
 
 #Open csv file
-with open(election_csv) as election_csv:
+with open(election_csv) as csvfile:
+
+        #Lists to store data
+        candidates = []
+        candidate_votes = {}
+                
+        #Vote counter
+        votes = 0
 
         #Variable to hold contents
-        csv_reader = csv.reader(election_csv)
+        csvreader = csv.reader(csvfile)
 
         #Reader header as the first row
-        csv_header = next(csv_reader)
+        csv_header = next(csvreader)
         print(f"CSV Header: {csv_header}")
 
         #Read rows after the header
-        for row in csv_reader:
-                total_votes = int(row[0])
-                print(total_votes)
-         
+        for row in csvreader:
+                
+                #Total Votes
+                votes = votes + 1
+
+                #Candidates
+                candidates.append(str(row[2]))
+                              
+                
 
 
 
 
-#print("Election Results" "\n")
-#print("----------------------------------------" "\n")
-#print("Total Votes:" "\n")
-#print("----------------------------------------" "\n")
-#print("Charles Casper Stockham: " + " " + " " "\n")
+print("Election Results")
+print("----------------------------------------")
+print("Total Votes:", len(votes))
+print("----------------------------------------")
+#print("Charles Casper Stockham: ", )
 #print("Diana DeGette: " + " " + " " "\n")
 #print("Raymon Anthony Doane: " + " " + " " "\n")
 #print("----------------------------------------" "\n")
