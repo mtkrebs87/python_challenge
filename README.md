@@ -1,3 +1,11 @@
+The code for both parts of the challenge runs well, however it they do not produce the desired resutls.
+
+For PyBank, I was unable to calculate the correct Average change.
+
+For PyPoll, Each candidate has "Raymon's" values attached to them. However, I was able to pull the winner out of the number of votes.
+
+With a little more time I'm confident I would have solved both issues above.
+
 # python_challenge
 Module 3 Challenge
 Background
