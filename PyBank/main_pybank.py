@@ -20,7 +20,7 @@ with open(budget_csv) as csvfile:
  
     #Reader header as the first row
     csv_header = next(csvreader)
-    print(f"CSV Header: {csv_header}")
+    #print(f"CSV Header: {csv_header}")
 
     #Read rows after header
     for row in csvreader:
@@ -59,10 +59,10 @@ with open(budget_csv) as csvfile:
 print("Financial Analysis")
 print("--------------------------------")
 print("Total Months: ", len(date))
-print("Total: ", sum(total_profit_loss))
+print("Total: ", "$", sum(total_profit_loss))
 print("Average Change: ", str((round(int(average_change)),2)))
 print("Greatest Increase in Profits: ", date[month_increase], "$", str(increase) )
-print("Greatest Decrease in Profits: ", date[month_decrease], str(decrease) )
+print("Greatest Decrease in Profits: ", date[month_decrease], "$", str(decrease) )
 
 #Don't forget to add "\n" to start new line at the end of each line of code
 
